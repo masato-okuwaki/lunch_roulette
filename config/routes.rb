@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
+  root "roulette#index"
   get 'roulette/index'
-  root "roulette/index"
 end
 
