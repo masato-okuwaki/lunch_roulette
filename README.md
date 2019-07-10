@@ -33,3 +33,8 @@ has_many :shops
 ### Assosiation
 has_many :shops 
 
+## genres table
+|Column         | Type             |Options                 |
+|:--------------|:-----------------|:-----------------------|
+|name           |string            |null: false, unique:true|
+
