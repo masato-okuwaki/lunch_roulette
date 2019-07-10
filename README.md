@@ -38,3 +38,5 @@ has_many :shops
 |:--------------|:-----------------|:-----------------------|
 |name           |string            |null: false, unique:true|
 
+### Assosiation
+has_many :shops 
