@@ -21,3 +21,7 @@ belongs_to :genre
 |:--------------|:-----------------|:-----------------------|
 |name           |string            |null: false, unique:true|
 
+### Assosiation
+has_many :shops 
+
+
