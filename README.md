@@ -25,3 +25,8 @@ belongs_to :genre
 has_many :shops 
 
 
+## areas table
+|Column         | Type             |Options                 |
+|:--------------|:-----------------|:-----------------------|
+|name           |string            |null: false, unique:true|
+
