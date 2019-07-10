@@ -1,0 +1,51 @@
+.form {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: 4em;
+    padding-top: 10px;
+  }
+  &__inner {
+    flex-direction: column;
+    padding-bottom: 2em;
+
+    span {
+      font-size: 3em;
+    }
+    &--input {
+    
+      height: 5em;
+      width: 60em;
+      border-radius: 10px;
+      -webkit-appearance:none;
+      border: 1px solid #ccc
+    }
+  }
+  &__btn-box {
+    
+    width:100px;
+    height:10px;
+    margin: 0 auto;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #ffffa3;;/*ボタン色*/
+    color: #696969;
+    // border-bottom: solid 4px #627295;
+    box-shadow: 0px 3px 5px #333333;
+    border-radius: 3px;
+    width: 100px;
+  }
+  &__btn:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+  }
+}

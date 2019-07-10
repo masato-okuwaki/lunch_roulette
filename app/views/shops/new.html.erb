@@ -1,0 +1,48 @@
+<div class="form__title">
+  お店登録フォーム
+</div>
+
+<div class="form">
+  <%= form_for(@shop) do |f| %>
+  <div class="form__inner">
+    <span>店名:</span>
+    <%= f.text_field :name, class: "form__inner--input" %>
+  </div>
+
+  <div class="form__inner">
+    <span>URL:</span>
+    <%= f.text_field :url, class: "form__inner--input" %>
+  </div>
+
+  <div class="form__inner">
+    <span>ジャンル:</span>
+    <%= f.select :genre, 
+    [["選択してください", ""],
+     ["和食", "和食"],
+     ["中華", "中華"],
+     ["洋食", "洋食"],
+     ["イタリアン", "イタリアン"]],
+    {}, {class: "form__inner--input"} %>
+  </div>
+
+  <div class="form__inner">
+    <span>場所:</span>
+    <%= f.select :area, 
+    [["選択してください", ""],
+     ["アジアビル近辺", "アジアビル近辺"],
+     ["フォンティス近辺", "フォンティス近辺"],
+     ["新太宗ビル近辺", "新太宗ビル近辺"]],
+    {}, {class: "form__inner--input"} %>
+  </div>
+
+  <div class="form__inner">
+    <span>登録者名:</span>
+    <%= f.text_field :registered_name, class: "form__inner--input" %>
+  </div>
+
+  <div class="form__btn-box">
+    <%= f.submit value: "登録する", class:"form__btn"%>
+  </div>
+  <% end %>
+
+</div>
