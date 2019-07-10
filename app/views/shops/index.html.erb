@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="title">
+    <h1>ランチルーレット</h1>
+  </div>
+
+  <select class="checkbox">
+    <option value="1">和食</option>
+    <option value="2">中華</option>
+    <option value="3">洋食</option> 
+    <option value="4">イタリアン</option> 
+  </select>
+
+  <div class="selectbox">
+    <ul>
+      <li class="selectbox_list">きょうのランチはどこに行こう？</li>
+    </ul>
+  </div>
+
+  <div class="btns">
+    <button class="start-btn" >START</button>
+    <button class="add-btn"><%= link_to 'お店リスト追加', "/roulette/:id/edit", class: "selectbox_a" %></button>
+  </div>
+</div>
+
