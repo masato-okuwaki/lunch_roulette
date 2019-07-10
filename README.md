@@ -1,24 +1,42 @@
 # README
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## shops table
+|Column         | Type             |Options                 |
+|:--------------|:-----------------|:-----------------------|
+|name           |string            |null: false, unique:true|
+|genre          |refernces         |foreign_key: true       |
+|area           |refernces         |foreign_key: true       |
+|address        |text              |                        |
+|user           |refernces         |foreign_key: true       |
+|url            |text              |null: false, unique:true|
 
-Things you may want to cover:
+### Assosiation
+belongs_to :user
+belongs_to :area
+belongs_to :genre
 
-* Ruby version
+## users table 
+|Column         | Type             |Options                 |
+|:--------------|:-----------------|:-----------------------|
+|name           |string            |null: false, unique:true|
 
-* System dependencies
+### Assosiation
+has_many :shops 
 
-* Configuration
 
-* Database creation
+## areas table
+|Column         | Type             |Options                 |
+|:--------------|:-----------------|:-----------------------|
+|name           |string            |null: false, unique:true|
 
-* Database initialization
+### Assosiation
+has_many :shops 
 
-* How to run the test suite
+## genres table
+|Column         | Type             |Options                 |
+|:--------------|:-----------------|:-----------------------|
+|name           |string            |null: false, unique:true|
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Assosiation
+has_many :shops 
