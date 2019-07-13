@@ -3,6 +3,7 @@ require 'csv'
 CSV.foreach('db/seeds/csv/shops_table.csv', headers: true) do |row|
   Shop.create(
     id: row['id'],
+    name: row['name'],
     url: row['url'],
     area_id: row['area_id'],
     user_id: row['user_id'],
