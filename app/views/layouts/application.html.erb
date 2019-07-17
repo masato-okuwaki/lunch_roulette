@@ -10,6 +10,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= image_tag("restaurant-1724294_1280.png", size: "30x30", class: "image-main") %>
+      <%= link_to "LunchRoulette", "/" %>
+    </header>
+    <div id="move-line1">
+    </div>
+      <%= yield %>
+    <footer>
+      <small>Copyright (c) MasatoOkuwaki All Rights Reserved.</small>
+    </footer>
   </body>
 </html>
