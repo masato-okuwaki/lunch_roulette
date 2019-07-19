@@ -12,7 +12,7 @@ CSV.foreach('db/seeds/csv/shops_table.csv', headers: true) do |row|
 )
 end
 
-CSV.foreach('sb/seeds/csv/areas_table.csv', headers: true) do |row|
+CSV.foreach('db/seeds/csv/areas_table.csv', headers: true) do |row|
   Area.create(
     id: row['id'],
     name: row['name']
