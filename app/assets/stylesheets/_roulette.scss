@@ -1,15 +1,19 @@
 html {
   font-size: 62.5%;
-  background: #fad186;
+  background: url(https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/fdqvrxun/4607004/57eg_w1140h600.jpg);
+  background-size: cover;
 }
 
 body {
   font-family: 'Futura', Tahoma, Geneva, Verdana, sans-serif;
   color: #696969;
   background-size: cover;
+  background: rgba(255,255,255,0.5);
+  font-family: serif;
 }
 .content {
-  margin: 0;
+  margin: 150px auto;
+  width: 70%;
 }
 
 header {
@@ -88,6 +92,7 @@ header a {
   font-size: 4rem;
   border:1px;
   box-shadow: 0px 3px 5px #333333;
+  font-family: monospace;
   &__option {
     color: #696969;
   } 
@@ -160,7 +165,7 @@ footer {
   font-size: 18px;
   color: #fff;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 160px;
 }
 
 
