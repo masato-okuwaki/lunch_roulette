@@ -1,44 +1,48 @@
-<div class="form__title">
-  お店登録フォーム
-</div>
-
-<div class="form">
-  <%= form_for(@shop) do |f| %>
-  <div class="form__inner">
-    <span>店名:</span>
-    <%= f.text_field :name, class: "form__inner--input" %>
+<div class="registration_form">
+  <div class="form__title">
+    お店登録フォーム
   </div>
+  
+  <div class="form">
+    <%= form_for(@shop) do |f| %>
+    <div class="form__inner">
+      <p>店名:</p>
+      <%= f.text_field :name, class: "form__inner--input" %>
+    </div>
+  
+    <div class="form__inner">
+      <p>URL:</p>
+      <%= f.text_field :url, class: "form__inner--input" %>
+    </div>
 
-  <div class="form__inner">
-    <span>URL:</span>
-    <%= f.text_field :url, class: "form__inner--input" %>
-  </div>
-
-  <div class="form__inner">
-    <span>ジャンル:</span>
-    <%= fields_for @shop do |genre| %>
-      <%= genre.collection_select :genre_id, Genre.all, :id, :name,
-      :prompt => "選択してください", class: "form__inner--input" %>
+    <div class="is-flex">
+      <div class="form__inner">
+        <p>ジャンル:</p>
+        <%= fields_for @shop do |genre| %>
+          <%= genre.collection_select :genre_id, Genre.all, :id, :name,
+          :prompt => "選択してください", class: "form__inner--input" %>
+        <% end %>
+      </div>
+        
+      <div class="form__inner">
+        <p>場所:</p>
+        <%= fields_for @shop do |area| %>
+          <%= area.collection_select :area_id, Area.all, :id, :name,
+          :prompt => "選択してください", class: "form__inner--input select-form_size"%>
+      </div>
+    </div>
+  
+    <div class="form__inner">
+      <p>登録者名:</p>
+      <%= fields_for @user do |user| %>
+        <%= user.text_field :name, class: "form__inner--input"%>
+      <% end %>
+    </div>
+  
+    <div class="form__btn-box">
+      <%= f.submit value: "登録する", class:"form__btn"%>
+    </div>
     <% end %>
+   <% end %>
   </div>
-
-  <div class="form__inner">
-    <span>場所:</span>
-    <%= fields_for @shop do |area| %>
-      <%= area.collection_select :area_id, Area.all, :id, :name,
-      :prompt => "選択してください", class: "form__inner--input"%>
-  </div>
-
-  <div class="form__inner">
-    <span>登録者名:</span>
-    <%= fields_for @user do |user| %>
-      <%= user.text_field :name, class: "#form__inner--input"%>
-    <% end %>
-  </div>
-
-  <div class="form__btn-box">
-    <%= f.submit value: "登録する", class:"form__btn"%>
-  </div>
-  <% end %>
- <% end %>
 </div>

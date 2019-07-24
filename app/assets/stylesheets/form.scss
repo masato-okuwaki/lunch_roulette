@@ -1,46 +1,39 @@
 .form {
-  display: flex;
-  width: 600px;
+  width: 300px;
+  height: 550px;
   margin: 0 auto;
   &__title {
     text-align: center;
-    margin: 0 auto;
-    border-radius: 10px;
+    margin: 50px auto;
     font-size: 4em;
-    padding-top: 10px;
+    color: snow;
   }
   &__inner {
-    flex-direction: column;
     padding-bottom: 2em;
-
-    span {
+    p {
       font-size: 3em;
     }
     &--input {
-    
-      height: 5em;
-      width: 60em;
       border-radius: 10px;
-      -webkit-appearance:none;
-      border: 1px solid #ccc
+      border: 1px solid #ccc;
+      font-size: 30px;
+      padding: 5px 15px;
     }
   }
   &__btn-box {
-    
-    width:100px;
+    text-align: center;
     height:10px;
     margin: 0 auto;
   }
   &__btn {
-    display: inline-block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: #ffffa3;;/*ボタン色*/
+    background: #ffffa3;
     color: #696969;
-    // border-bottom: solid 4px #627295;
+    font-size: 25px;
     box-shadow: 0px 3px 5px #333333;
     border-radius: 3px;
-    width: 100px;
+    padding: 13px 80px;
+    font-weight: bold;
+    margin: 45px;
   }
   &__btn:active {
     /*ボタンを押したとき*/
@@ -48,4 +41,31 @@
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
   }
+  #shop_area_id, #shop_genre_id{
+    font-size: 14px;
+    height: 50px;
+    margin-right: 50px;
+  }
+}
+.shop_buy{
+  &_message{
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    margin: 200px auto;
+    h1{
+      font-size: 70px;
+      color: ghostwhite;
+    }
+  }
+  &_path{
+    font-size: 40px;
+    margin-top: 100px;
+    a{
+      color: gray;
+    }
+  }
+}
+.is-flex{
+  display: flex;
 }
