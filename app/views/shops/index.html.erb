@@ -1,22 +1,29 @@
 <div class="content">
 
-  <select class="checkbox">
+  <select class="checkbox" id="genre_select">
     <option class="checkbox__option" value="">ジャンルを選択してください</option>
     <option value="1">和食</option>
     <option value="2">中華</option>
-    <option value="3">洋食</option> 
-    <option value="4">イタリアン</option> 
+    <option value="3">洋食</option>
+    <option value="4">イタリアン</option>
+    <option value="5">肉系</option>
+    <option value="6">中華料理</option>
+    <option value="7">韓国料理</option>
+    <option value="8">和食</option>
   </select>
 
-  <select class="checkbox">
+  <select class="checkbox" id="area_select">
     <option class="checkbox__option" value="">エリアを選択してください</option>
     <option value="1">アジアビル近辺</option>
     <option value="2">フォンティスビル近辺</option>
-    <option value="3">新大宗ビル</option>  
+    <option value="3">新大宗ビル</option>
   </select>
 
+  <div id="append">
+  </div>
+
   <div class="btns">
-    <button class="start-btn">START</button>
+    <button class="start-btn" id="button">START</button>
   </div>
 </div>
 
@@ -24,4 +31,4 @@
 <%= link_to new_shop_path, class: "add-btn" do %>
   <%= fa_icon 'plus-circle' %>
 <% end %>
-  
+
