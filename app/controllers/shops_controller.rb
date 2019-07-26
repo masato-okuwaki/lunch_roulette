@@ -14,6 +14,14 @@ class ShopsController < ApplicationController
     @user.save
   end
 
+  def search
+    shops = Shop.where(genre: params[:genre], area: params[:area])
+    @shop = shops.sample(1)
+    respond_to do |format|
+      format.json
+    end
+  end
+
   private
 
   def shop_params
